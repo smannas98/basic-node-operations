@@ -1,0 +1,160 @@
+1.
+SORT just returns the file you specified with every line alphabetically organized.
+
+	     break;
+            //we will add the functionality of echo next within the object 			     commandLibrary
+            break;
+            commandLibrary.cat(userInputArray.slice(1));
+            commandLibrary.echo(userInputArray.slice(1).join(" "));
+            done(data);
+            if (err) throw err;
+        case "cat":
+        case "echo":
+        const fileName = fullPath[0];
+        done(userInput);
+        fs.readFile(fileName, (err, data) => {
+        });
+    "cat": function(fullPath) {
+    "echo": function(userInput) {
+    //parses the user input to understand which command was typed
+    //the cat command
+    //the echo command
+    const command = userInputArray[0];
+    const userInputArray = userInput.split(" ");
+    process.stdout.write('\nprompt > ');
+    process.stdout.write(output);
+    switch (command) {
+    }
+    }
+    },
+//where we will store the commands
+//where we will store the logic of the commands
+//write out data
+const commandLibrary = {
+const fs = require("fs");
+function done(output) {
+function evaluateCmd(userInput) {
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+}
+}
+};
+
+———————————————————————————————————————————————————————————————
+
+WC returns the number of lines, words, and characters in the file.
+
+43     119    1178 commands.js
+
+————————————————————————————————————————————————————————————————————
+
+UNIQ will run through the file and return only the lines that occur once. Any repeats will be discarded. Essentially only returning “unique” lines in the file.
+
+            break;
+            //we will add the functionality of echo next within the object 			    commandLibrary
+            break;
+            commandLibrary.cat(userInputArray.slice(1));
+            commandLibrary.echo(userInputArray.slice(1).join(" "));
+            done(data);
+            if (err) throw err;
+        case "cat":
+        case "echo":
+        const fileName = fullPath[0];
+        done(userInput);
+        fs.readFile(fileName, (err, data) => {
+        });
+    "cat": function(fullPath) {
+    "echo": function(userInput) {
+    //parses the user input to understand which command was typed
+    //the cat command
+    //the echo command
+    const command = userInputArray[0];
+    const userInputArray = userInput.split(" ");
+    process.stdout.write('\nprompt > ');
+    process.stdout.write(output);
+    switch (command) {
+    }
+    }
+    },
+//where we will store the commands
+//where we will store the logic of the commands
+//write out data
+const commandLibrary = {
+const fs = require("fs");
+function done(output) {
+function evaluateCmd(userInput) {
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+}
+}
+};
+Seans-MBP:basic-node-operations sean$ wc commands.js
+      43     119    1178 commands.js
+Seans-MBP:basic-node-operations sean$ uniq commands.js
+const fs = require("fs");
+
+//write out data
+function done(output) {
+    process.stdout.write(output);
+    process.stdout.write('\nprompt > ');
+}
+
+//where we will store the commands
+function evaluateCmd(userInput) {
+    //parses the user input to understand which command was typed
+    const userInputArray = userInput.split(" ");
+    const command = userInputArray[0];
+
+    switch (command) {
+        case "echo":
+            //we will add the functionality of echo next within the object commandLibrary
+            commandLibrary.echo(userInputArray.slice(1).join(" "));
+             break;
+        case "cat":
+            commandLibrary.cat(userInputArray.slice(1));
+            break;
+            
+    }
+}
+
+//where we will store the logic of the commands
+const commandLibrary = {
+    //the echo command
+    "echo": function(userInput) {
+        done(userInput);
+    },
+    //the cat command
+    "cat": function(fullPath) {
+        const fileName = fullPath[0];
+        fs.readFile(fileName, (err, data) => {
+            if (err) throw err;
+            done(data);
+        });
+    }
+};
+
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+
+———————————————————————————————————————————————————————————————
+
+2.
+
+I piped UNIQ into WC for commands.js. The output was       “45     122    1184” the original WC was “46     128    1217” This was the output because UNIQ ran through the commands.js file and removed any duplicate lines, then WC ran through the file and counted the characters, lines, and words on the newly updated commands.js and returned the necessary output.
+
+———————————————————————————————————————————————————————————————
+
+6. 
+
+function reverseString(arr) {
+  arr.forEach((element) => {
+    element.split('').reverse().join('');
+  })
+};
+
+array = ['This', 'Is', 'Test', 'Array'];
+
+console.log(reverseString(array));
+
+
+
